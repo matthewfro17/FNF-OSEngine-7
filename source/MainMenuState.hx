@@ -95,7 +95,12 @@ class MainMenuState extends MusicBeatState
         bg.screenCenter();
         bg.antialiasing = ClientPrefs.globalAntialiasing;
         add(bg);
+        var testshader:Shaders.GlitchEffect = new Shaders.GlitchEffect(2, 5, 0.1);
+        bg.shader = testshader.shader;
+        curbg = bg;
 
+
+		
         if(ClientPrefs.themedmainmenubg == true) {
 
             var themedBg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
